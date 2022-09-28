@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: '16.x'
 
+      - name: compile frontend
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
       - name: npm install, build, and test
         run: |
           npm install
