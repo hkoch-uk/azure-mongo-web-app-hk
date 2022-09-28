@@ -4,7 +4,7 @@ function Register() {
    <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input"> </input>
+    <input class="input" type="text" placeholder="Text input" /> 
   </div>
 </div>
 
@@ -12,7 +12,7 @@ function Register() {
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@"> </input>
+    <input class="input is-danger" type="email" placeholder="Email input" value="hello@" /> 
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -45,7 +45,7 @@ function Register() {
 <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox"> </input>
+      <input type="checkbox" /> 
       I agree to the <a href="#">terms and conditions</a>
     </label>
   </div>
@@ -54,11 +54,11 @@ function Register() {
 <div class="field">
   <div class="control">
     <label class="radio">
-      <input type="radio" name="question"></input>
+      <input type="radio" name="question" />
       Yes
     </label>
     <label class="radio">
-      <input type="radio" name="question"></input>
+      <input type="radio" name="question" />
       No
     </label>
   </div>
