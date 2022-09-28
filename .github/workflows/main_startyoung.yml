@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'StartYoung'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C79B1EFBE58D4E828071DB66B18AF788 }}
+          publish-profile: ${{ secrets.APPSERVICE_PP }}
           package: .
