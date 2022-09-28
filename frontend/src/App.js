@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import Register from "./components/Register";
+import SchoolPage from "./pages/SchoolPage";
 
 function App() {
   return (
     <div>
-   
-          <Register />
+      {/* <Register /> */}
+      <SchoolPage />
     </div>
   );
 }
