@@ -1,18 +1,45 @@
 
 function Register() {
+
+
+
     return<>
-   <div class="field">
-  <label class="label">Name</label>
+
+<div class="box">
+  Explain memberships/info
+  Individual child register is after signing up as school
+</div>
+
+<div class="field">
+  <label class="label">Type</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input" /> 
+    <div class="select">
+      <select>
+        <option>Buddy</option>
+        <option>School</option>
+        <option>Sponsor</option>
+      </select>
+    </div>
   </div>
 </div>
 
+  <div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Full Name" /> 
+  </div>
+</div>
+<div class="field">
+  <label class="label">Address</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Address" /> 
+  </div>
+</div>
 
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@" /> 
+    <input class="input is-danger" type="email" placeholder="Email address" /> 
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -20,25 +47,62 @@ function Register() {
       <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
-  <p class="help is-danger">This email is invalid</p>
+  {/* <p class="help is-danger">This email is invalid</p> */}
+</div>
+<div class="field">
+  <label class="label">Contact Number</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Contact Number" /> 
+  </div>
+</div>
+
+{/* buddy only */}
+
+<div class="field">
+  <label class="label">Occupation</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="Occupation"></textarea>
+  </div>
 </div>
 
 <div class="field">
-  <label class="label">Intrests</label>
+  <label class="label">Interests (Control and click up to 3 options)</label>
   <div class="control">
-    <div class="select">
-      <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
+    <div class="select is-multiple">
+      <select multiple size="3">
+        <option>Sports</option>
+        <option>Arts and Crafts</option>
+        <option>TV and Film</option>
+        <option>Reading</option>
+        <option>Outdoors</option>
       </select>
     </div>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Message</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
+    <label class="checkbox">
+      <input type="checkbox" />  
+      I agree to the <a href="#">sending a letter twice a term</a>
+    </label>
+  </div>
+</div>
+
+{/* school only */}
+
+<div class="field">
+  <label class="label">School Name</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="School Name"></textarea>
+  </div>
+</div>
+
+{/* ASK TOMORROW IF THERE IS A LIST */}
+<div class="field">
+  <label class="label">Area child would like support with</label> 
+  <div class="control">
+    <textarea class="textarea" placeholder="Area for support"></textarea>
   </div>
 </div>
 
@@ -46,21 +110,22 @@ function Register() {
   <div class="control">
     <label class="checkbox">
       <input type="checkbox" /> 
-      I agree to the <a href="#">terms and conditions</a>
+      The parent has consented to the child being signed up to the programme
     </label>
   </div>
 </div>
 
 <div class="field">
+  <label class="label">Sign</label>
   <div class="control">
-    <label class="radio">
-      <input type="radio" name="question" />
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question" />
-      No
-    </label>
+    <textarea class="textarea" placeholder="Sign here"></textarea>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Date</label>
+  <div class="control">
+    <input type="date" />
   </div>
 </div>
 
