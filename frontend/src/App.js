@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Register from "./components/Register";
+import RegisterTest from "./components/RegisterTest";
 
 function App() {
   return (
     <div>
    
-          <Register />
+          <RegisterTest />
     </div>
   );
 }
