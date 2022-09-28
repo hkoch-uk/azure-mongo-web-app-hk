@@ -1,10 +1,16 @@
+import React from "react"
 
 function Register() {
 
+  var memberOption; 
+
+  function handleClick(e) {
+    memberOption = e.target.value
+    console.log(memberOption)
+  }
 
 
     return<>
-
 <div class="box">
   Explain memberships/info
   Individual child register is after signing up as school
@@ -13,11 +19,11 @@ function Register() {
 <div class="field">
   <label class="label">Type</label>
   <div class="control">
-    <div class="select">
-      <select>
-        <option>Buddy</option>
-        <option>School</option>
-        <option>Sponsor</option>
+    <div class="select" >
+      <select onChange={(choice) => handleClick(choice)}>
+        <option id="buddy">Buddy</option>
+        <option id="school">School</option>
+        <option id="sponsor">Sponsor</option>
       </select>
     </div>
   </div>
@@ -57,6 +63,38 @@ function Register() {
 </div>
 
 {/* buddy only */}
+
+  <div class="field">
+  <label class="label">Occupation</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="Occupation"></textarea>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Interests (Control and click up to 3 options)</label>
+  <div class="control">
+    <div class="select is-multiple">
+      <select multiple size="3">
+        <option>Sports</option>
+        <option>Arts and Crafts</option>
+        <option>TV and Film</option>
+        <option>Reading</option>
+        <option>Outdoors</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox" />  
+      I agree to the <a href="#">sending a letter twice a term</a>
+    </label>
+  </div>
+</div>
+  
 
 <div class="field">
   <label class="label">Occupation</label>
