@@ -18,7 +18,19 @@ export default function NewChildForm({
 
   function handleSubmit(e) {
     e.preventDefault();
-    addChildrenToDataBase(form);
+
+    let hobbyCollectionNode = document.getElementsByName("hobbyCheckbox");
+
+    let hobbyCollection = [];
+
+    for (const hobbyCollect of hobbyCollectionNode) {
+      if (hobbyCollect.checked) {
+        hobbyCollection = [...hobbyCollection, hobbyCollect.value];
+      }
+    }
+    setForm({ ...form, hobby: hobbyCollection });
+    addChildrenToDataBase({ ...form, hobby: hobbyCollection });
+    toggleAddChildren();
   }
 
   function cancel() {
@@ -28,13 +40,16 @@ export default function NewChildForm({
 
   const addChildrenToDataBase = (newChildren) => {
     const newChildId = children.length;
-    const updatedNewChildren = { id: newChildId, ...newChildren };
+    const updatedNewChildren = {
+      id: newChildId,
+      ...newChildren,
+      mentor: "TBC",
+    };
     setChildren([...children, updatedNewChildren]);
   };
 
   function handleChange(e) {
     const targetEvent = e.target;
-    console.log("targetEvent", targetEvent.name);
     setForm({ ...form, [targetEvent.name]: targetEvent.value });
   }
 
@@ -64,30 +79,15 @@ export default function NewChildForm({
         </label>
         <label htmlFor="">
           <span>drawing</span>
-          <input
-            type="checkbox"
-            value="drawing"
-            name=""
-            onChange={handleChange}
-          />
+          <input type="checkbox" value="drawing" name="hobbyCheckbox" />
         </label>
         <label htmlFor="">
           <span>football</span>
-          <input
-            type="checkbox"
-            value="football"
-            name=""
-            onChange={handleChange}
-          />
+          <input type="checkbox" value="football" name="hobbyCheckbox" />
         </label>
         <label htmlFor="">
           <span>camping</span>
-          <input
-            type="checkbox"
-            value="camping"
-            name=""
-            onChange={handleChange}
-          />
+          <input type="checkbox" value="camping" name="hobbyCheckbox" />
         </label>
 
         <button type="submit">Confirm</button>
