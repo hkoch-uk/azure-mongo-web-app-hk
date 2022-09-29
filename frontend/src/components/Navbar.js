@@ -41,9 +41,9 @@ export function Navbar() {
             THE BUDDY SYSTEM
           </a>
 
-          <a class="navbar-item">
+          <Link to='join-us' class="navbar-item">
             JOIN US
-          </a>
+          </Link>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">

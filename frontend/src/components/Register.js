@@ -1,8 +1,8 @@
 import React from "react"
 
-function Register() {
+export function Register() {
 
-  var memberOption; 
+  var memberOption;
 
   function handleClick(e) {
     memberOption = e.target.value
@@ -31,13 +31,13 @@ is-offset-one-fifth">
   <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Full Name" /> 
+    <input class="input" type="text" placeholder="Full Name" />
   </div>
 </div>
 <div class="field">
   <label class="label">Address</label>
   <div class="control has-icons-left">
-    <input class="input" type="text" placeholder="Address" /> 
+    <input class="input" type="text" placeholder="Address" />
     <span class="icon is-small is-left">
     <i class="fas fa-house"></i>
     </span>
@@ -47,7 +47,7 @@ is-offset-one-fifth">
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email address" /> 
+    <input class="input" type="email" placeholder="Email address" />
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -60,7 +60,7 @@ is-offset-one-fifth">
 <div class="field">
   <label class="label">Contact Number</label>
   <div class="control has-icons-left">
-    <input class="input" type="text" placeholder="Contact Number" /> 
+    <input class="input" type="text" placeholder="Contact Number" />
     <span class="icon is-small is-left">
       <i class="fas fa-phone"></i>
     </span>
@@ -97,7 +97,7 @@ is-offset-one-fifth">
 <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox" />  
+      <input type="checkbox" />
       I agree to the <a href="#">sending a letter twice a term</a>
     </label>
   </div>
@@ -114,7 +114,7 @@ is-offset-one-fifth">
 
 {/* ASK TOMORROW IF THERE IS A LIST */}
 <div class="field">
-  <label class="label">Area child would like support with</label> 
+  <label class="label">Area child would like support with</label>
   <div class="control">
     <input class="input" type="text" placeholder="Area for support"></input>
   </div>
@@ -123,7 +123,7 @@ is-offset-one-fifth">
 <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox" /> 
+      <input type="checkbox" />
       The parent has consented to the child being signed up to the programme
     </label>
   </div>
@@ -157,5 +157,3 @@ is-offset-one-fifth">
 
 
 }
-
-export default Register;
