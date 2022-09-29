@@ -1,9 +1,15 @@
 import React from "react"
 import { useState } from 'react';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
+import image from '../pic/startuk.png'
 
 const testdata = '[{"user_name": "Linlin","email":"linlin@young.uk", "role": "Montee", "pwd":"123","id":"1"}, {"user_name": "Fran","email":"fran@young.uk", "role": "Charity", "pwd": "123", "id":"2"}, {"user_name": "Ryan","email":"Ryan@young.uk", "role": "Sponsor", "pwd": "123", "id":"3"}, {"user_name": "Dylan","email":"dylan@young.uk", "role": "Montor", "pwd": "123", "id":"4"},{"user_name": "A school", "email":"school", "role":"School", "pwd":"123", "id":"5"}]'
+
+const mystyle = {
+  position:"fixed",
+	top:"0",
+	left:"10",
+};
 
 function handleChange(e){
 }
@@ -40,6 +46,9 @@ export default function (props) {
   }
   return (
     <div className="Auth-form-container">
+      <img src = {image} 
+      style = {mystyle}
+      className = "startuk-image"></img>
       <form className="Auth-form" onSubmit={handleSubmit}>
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
