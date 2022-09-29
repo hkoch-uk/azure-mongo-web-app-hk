@@ -1,14 +1,22 @@
 export function ReadingHero() {
   return <>
     <section class="hero is-link is-fullheight-with-navbar reading-background">
-      <div class="hero-body">
-        <div class="container has-text-centered">
+    <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title is-size-1">
+        StartYoungUK
+      </p>
+      <p class="title is-size-3">
+        Giving children the best start
+      </p>
+      <div class="container has-text-centered">
           <button class="button is-link" id='learn-btn'>
             LEARN MORE
           </button>
         </div>
-      </div>
-    </section>
+    </div>
+  </div>
+  </section>
   </>
 }
 
