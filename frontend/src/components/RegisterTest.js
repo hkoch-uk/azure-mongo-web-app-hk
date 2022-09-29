@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 export function RegisterTest() {
 
@@ -8,6 +8,12 @@ export function RegisterTest() {
     memberOption = e.target.value
     console.log(memberOption)
   }
+
+  const [buttonText, setButtonText] = useState("Submit");
+  function submitButton() {
+    setButtonText("Thanks for registering. You will recieve an email shortly")
+  }
+
   const [schoolActive, setSchoolActive] = React.useState("is-active")
   const [buddyActive, setBuddyActive] = React.useState("")
   const [sponsorActive, setSponsorActive] = React.useState("")
@@ -281,13 +287,12 @@ export function RegisterTest() {
           </div>
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-danger is-rounded">Submit</button>
+              <button class="button is-danger is-rounded" onClick={submitButton}>Submit</button>
             </div>
             <div class="control">
               <button class="button is-rounded">Cancel</button>
             </div>
           </div>
-
         </div>
       </div>
     </section>
