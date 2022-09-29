@@ -78,7 +78,7 @@ export default function NewChildForm({
           <input type="checkbox" value="football" name="hobbyCheckbox" />
         </label>
         <label htmlFor="">
-          <span>football</span>
+          <span>music</span>
           <input type="checkbox" value="music" name="hobbyCheckbox" />
         </label>
         <label htmlFor="">
