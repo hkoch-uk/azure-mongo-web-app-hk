@@ -32,12 +32,13 @@ const mockChilrenData = [
 export default function SchoolPage() {
   const [children, setChildren] = useState([]);
   const [addChild, setAddChild] = useState(false);
+  const [viewChildren, setViewChildren] = useState(false);
   const [form, setForm] = useState({});
 
   useEffect(() => {
     setChildren(mockChilrenData);
   }, []);
-  const addChildrenToDataBase = () => {};
+
   const fetchChildrenData = () => {
     fetch(``)
       .then((childrenFromDatabase) => childrenFromDatabase.json())
@@ -46,6 +47,10 @@ export default function SchoolPage() {
 
   const toggleAddChildren = () => {
     setAddChild(!addChild);
+  };
+
+  const toggleViewChildren = () => {
+    setViewChildren(!viewChildren);
   };
 
   const deleteChildren = (id) => {
@@ -57,19 +62,21 @@ export default function SchoolPage() {
   return (
     <div className="school-page">
       <section>
-        <button>View Chilren</button>
+        <button onClick={toggleViewChildren}>View Chilren</button>
         <button onClick={toggleAddChildren}>add more child</button>
         <section>
           {addChild ? (
             <NewChildForm
               formData={form}
               toggleAddChildren={toggleAddChildren}
+              children={children}
+              setChildren={setChildren}
             />
           ) : null}
         </section>
 
         <section className="child-view-section">
-          {children.length ? (
+          {viewChildren ? (
             <>
               {children.map((child, index) => {
                 return (

@@ -8,17 +8,29 @@ import { useState } from "react";
 //     id: 1,
 //   }
 
-export default function NewChildForm({ formData, toggleAddChildren }) {
+export default function NewChildForm({
+  formData,
+  toggleAddChildren,
+  children,
+  setChildren,
+}) {
   const [form, setForm] = useState(formData);
 
   function handleSubmit(e) {
     e.preventDefault();
+    addChildrenToDataBase(form);
   }
 
   function cancel() {
     setForm({});
     toggleAddChildren();
   }
+
+  const addChildrenToDataBase = (newChildren) => {
+    const newChildId = children.length;
+    const updatedNewChildren = { id: newChildId, ...newChildren };
+    setChildren([...children, updatedNewChildren]);
+  };
 
   function handleChange(e) {
     const targetEvent = e.target;
@@ -41,18 +53,39 @@ export default function NewChildForm({ formData, toggleAddChildren }) {
         <label htmlFor="">
           <span>age</span>
           <input
-            type="number"
+            type="text"
             value={form.age}
             name="age"
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="">
+        <label htmlFor="" className="hobby-label">
           <span>hobby</span>
+        </label>
+        <label htmlFor="">
+          <span>drawing</span>
           <input
-            type="text"
-            value={form.hobby}
-            name="hobby"
+            type="checkbox"
+            value="drawing"
+            name=""
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="">
+          <span>football</span>
+          <input
+            type="checkbox"
+            value="football"
+            name=""
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="">
+          <span>camping</span>
+          <input
+            type="checkbox"
+            value="camping"
+            name=""
             onChange={handleChange}
           />
         </label>
