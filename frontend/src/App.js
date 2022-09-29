@@ -1,9 +1,11 @@
 
 import logo from './logo.svg';
 import './App.css';
-import Login from './components/Login';
-import Test from './components/Test'
+import Login from './pages/Login';
+
+
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import SchoolPage from './pages/SchoolPage';
 
 function App() {
   return (
@@ -20,9 +22,9 @@ function App() {
           />
           <Route
             exact
-            path="/test"
+            path="/school"
             element={
-              <Test></Test>
+              <SchoolPage/>
             }
           />
         </Routes>

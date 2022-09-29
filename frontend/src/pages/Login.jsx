@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import image from '../pic/startuk.png'
 
-const testdata = '[{"user_name": "Linlin","email":"linlin@young.uk", "role": "Montee", "pwd":"123","id":"1"}, {"user_name": "Fran","email":"fran@young.uk", "role": "Charity", "pwd": "123", "id":"2"}, {"user_name": "Ryan","email":"Ryan@young.uk", "role": "Sponsor", "pwd": "123", "id":"3"}, {"user_name": "Dylan","email":"dylan@young.uk", "role": "Montor", "pwd": "123", "id":"4"},{"user_name": "A school", "email":"school", "role":"School", "pwd":"123", "id":"5"}]'
+const testdata = '[{"user_name": "Linlin","email":"linlin@young.uk", "role": "Montee", "pwd":"123","id":"1"}, {"user_name": "Fran","email":"fran@young.uk", "role": "Charity", "pwd": "123", "id":"2"}, {"user_name": "Ryan","email":"Ryan@young.uk", "role": "Sponsor", "pwd": "123", "id":"3"}, {"user_name": "Dylan","email":"dylan@young.uk", "role": "Montor", "pwd": "123", "id":"4"},{"user_name": "A school", "email":"school@young.uk", "role":"School", "pwd":"123", "id":"5"}]'
 
 const mystyle = {
   position:"fixed",
@@ -37,10 +37,18 @@ export default function (props) {
     let role = logincheck(e.target.email.value, e.target.pwd.value)
     if (role != null){
       console.log("find its role")
-      navigate("/test",{
-        name: e.target.email.value,
-      })
+      
     }
+    switch (role){
+      case "School":
+        navigate("/school",{
+          name: e.target.email.value,
+        })
+        break;
+    }
+       
+    
+    
   }
   function logInto(asd){
   }
