@@ -78,7 +78,7 @@ export default function SchoolPage() {
   return (
     <div className="school-page">
       <section>
-        <button onClick={toggleViewChildren}>View Chilren</button>
+        <button onClick={toggleViewChildren}>View Children</button>
         <button onClick={toggleAddChildren}>add more child</button>
         <section>
           {addChild ? (

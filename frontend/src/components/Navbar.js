@@ -60,7 +60,7 @@ function Navbar() {
             </div>
           </div>
         <div class="buttons">
-          <Link to='login' class="button is-primary">
+          <Link to='login' class="button is-danger">
             <strong>Sign up</strong>
           </Link>
           <Link to='login' class="button is-light">

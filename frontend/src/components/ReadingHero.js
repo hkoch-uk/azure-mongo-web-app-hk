@@ -10,7 +10,7 @@ export function ReadingHero() {
         Giving children the best start
       </p>
       <div class="container has-text-centered">
-          <button class="button is-link" id='learn-btn'>
+          <button class="button is-danger" id='learn-btn'>
             LEARN MORE
           </button>
         </div>
