@@ -28,6 +28,5 @@ function printChoice(val) {
   } else {
     btn.classList.remove('hidden')
   }
-
   console.log(val.target.value)
 }
