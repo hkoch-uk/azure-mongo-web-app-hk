@@ -8,7 +8,7 @@ function RegisterTest() {
     memberOption = e.target.value
     console.log(memberOption)
   }
-  const [schoolActive, setSchoolActive] = React.useState("")
+  const [schoolActive, setSchoolActive] = React.useState("is-active")
   const [buddyActive, setBuddyActive] = React.useState("")
   const [sponsorActive, setSponsorActive] = React.useState("")
   const [schoolSeen, setSchoolSeen] = React.useState("")
@@ -61,8 +61,11 @@ function RegisterTest() {
         <div class={schoolSeen}>
           <div class="field">
             <label class="label">Name</label>
-            <div class="control">
+            <div class="control has-icons-left">
               <input class="input" type="text" placeholder="Full Name" />
+              <span class="icon is-small is-left">
+                <i class="fas fa-person"></i>
+              </span>
             </div>
           </div>
 
@@ -73,7 +76,6 @@ function RegisterTest() {
               <span class="icon is-small is-left">
                 <i class="fas fa-house"></i>
               </span>
-
             </div>
           </div>
 
@@ -99,8 +101,11 @@ function RegisterTest() {
 
           <div class="field">
             <label class="label">School Name</label>
-            <div class="control">
+            <div class="control has-icons-left">
               <input class="input" type="text" placeholder="School Name"></input>
+              <span class="icon is-small is-left">
+                <i class="fas fa-school"></i>
+              </span>
             </div>
           </div>
 
@@ -144,10 +149,10 @@ function RegisterTest() {
 
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Submit</button>
+              <button class="button button is-danger is-rounded">Submit</button>
             </div>
             <div class="control">
-              <button class="button is-link is-light">Cancel</button>
+              <button class="button is-rounded">Cancel</button>
             </div>
           </div>
         </div>
@@ -156,8 +161,11 @@ function RegisterTest() {
       <div class={buddySeen}>
         <div class="field">
           <label class="label">Name</label>
-          <div class="control">
+          <div class="control has-icons-left">
             <input class="input" type="text" placeholder="Full Name" />
+            <span class="icon is-small is-left">
+                <i class="fas fa-person"></i>
+              </span>
           </div>
         </div>
 
@@ -226,10 +234,10 @@ function RegisterTest() {
         </div>
         <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Submit</button>
+              <button class="button is-danger is-rounded">Submit</button>
             </div>
             <div class="control">
-              <button class="button is-link is-light">Cancel</button>
+              <button class="button is-rounded">Cancel</button>
             </div>
           </div>
       </div>
@@ -239,8 +247,11 @@ function RegisterTest() {
       <div class={sponsorSeen}>
         <div class="field">
           <label class="label">Name</label>
-          <div class="control">
+          <div class="control has-icons-left">
             <input class="input" type="text" placeholder="Full Name" />
+            <span class="icon is-small is-left">
+                <i class="fas fa-person"></i>
+              </span>
           </div>
         </div>
 
@@ -275,10 +286,10 @@ function RegisterTest() {
           </div>
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Submit</button>
+              <button class="button is-danger is-rounded">Submit</button>
             </div>
             <div class="control">
-              <button class="button is-link is-light">Cancel</button>
+              <button class="button is-rounded">Cancel</button>
             </div>
           </div>
         </div>
