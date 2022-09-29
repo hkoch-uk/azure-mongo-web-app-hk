@@ -1,8 +1,8 @@
 import './App.css'
-import Navbar from './Components/Navbar';
+import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from './Components/Home';
-import { RegisterTest } from './Components/RegisterTest';
+import { Home } from './components/Home';
+import { RegisterTest } from './components/RegisterTest';
 
 function App() {
   return (
