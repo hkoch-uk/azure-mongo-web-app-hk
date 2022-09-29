@@ -59,6 +59,14 @@ function Navbar() {
               </a>
             </div>
           </div>
+        <div class="buttons">
+          <Link to='login' class="button is-primary">
+            <strong>Sign up</strong>
+          </Link>
+          <Link to='login' class="button is-light">
+            Log in
+          </Link>
+        </div>
         </div>
       </div>
     </nav>

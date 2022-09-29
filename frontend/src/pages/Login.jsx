@@ -1,7 +1,6 @@
 import React from "react"
 import { useState } from 'react';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import image from '../pic/startuk.png'
 
 const testdata = '[{"user_name": "Linlin","email":"linlin@young.uk", "role": "Montee", "pwd":"123","id":"1"}, {"user_name": "Fran","email":"fran@young.uk", "role": "Charity", "pwd": "123", "id":"2"}, {"user_name": "Ryan","email":"Ryan@young.uk", "role": "Sponsor", "pwd": "123", "id":"3"}, {"user_name": "Dylan","email":"dylan@young.uk", "role": "Montor", "pwd": "123", "id":"4"},{"user_name": "A school", "email":"school@young.uk", "role":"School", "pwd":"123", "id":"5"}]'
 
@@ -31,13 +30,13 @@ export default function (props) {
   const navigate = useNavigate();
 
   function handleSubmit(e){
-    
+
     e.preventDefault();
     console.log("The email values",e.target.email.value)
     let role = logincheck(e.target.email.value, e.target.pwd.value)
     if (role != null){
       console.log("find its role")
-      
+
     }
     switch (role){
       case "School":
@@ -46,17 +45,14 @@ export default function (props) {
         })
         break;
     }
-       
-    
-    
+
+
+
   }
   function logInto(asd){
   }
   return (
     <div className="Auth-form-container">
-      <img src = {image} 
-      style = {mystyle}
-      className = "startuk-image"></img>
       <form className="Auth-form" onSubmit={handleSubmit}>
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
