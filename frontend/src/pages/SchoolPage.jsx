@@ -34,6 +34,7 @@ export default function SchoolPage() {
   const [addChild, setAddChild] = useState(false);
   const [viewChildren, setViewChildren] = useState(false);
   const [form, setForm] = useState({});
+  const [read, setRead] = useState(false);
 
   useEffect(() => {
     setChildren(mockChilrenData);
@@ -51,6 +52,10 @@ export default function SchoolPage() {
 
   const toggleViewChildren = () => {
     setViewChildren(!viewChildren);
+  };
+
+  const toggleSendLetter = () => {
+    setRead(!read);
   };
 
   const deleteChildren = (id) => {
@@ -101,6 +106,14 @@ export default function SchoolPage() {
                       delete
                     </button>
                     <button>edit</button>
+                    <button onClick={toggleSendLetter}>
+                      {!read ? "Send letter" : "cancel"}
+                    </button>
+                    {read ? (
+                      <>
+                        <a href="mailto: abc@example.com">Send Email</a>
+                      </>
+                    ) : null}
                   </div>
                 );
               })}
