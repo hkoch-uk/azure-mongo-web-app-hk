@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom'
 
-export function Navbar() {
+function Navbar() {
   return <>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -65,3 +65,5 @@ export function Navbar() {
     <Outlet />
   </>
 }
+
+export default Navbar;
