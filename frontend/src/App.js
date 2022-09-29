@@ -7,6 +7,8 @@ import Login from './pages/Login'
 import SchoolPage from './pages/SchoolPage'
 
 function App() {
+  document.title = "Start Young UK";
+
   return (
   <BrowserRouter>
     <Routes>
