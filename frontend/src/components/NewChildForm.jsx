@@ -1,13 +1,5 @@
 import { useState } from "react";
 
-// {
-//     name: "linlin",
-//     hobby: ["football", "drawing"],
-//     age: 5,
-//     mentor: "kim",
-//     id: 1,
-//   }
-
 export default function NewChildForm({
   formData,
   toggleAddChildren,
@@ -84,6 +76,10 @@ export default function NewChildForm({
         <label htmlFor="">
           <span>football</span>
           <input type="checkbox" value="football" name="hobbyCheckbox" />
+        </label>
+        <label htmlFor="">
+          <span>football</span>
+          <input type="checkbox" value="music" name="hobbyCheckbox" />
         </label>
         <label htmlFor="">
           <span>camping</span>

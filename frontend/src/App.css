@@ -59,3 +59,10 @@
   padding: 5px;
   border-radius: 5px;
 }
+.hobby-tag{
+  margin: 2px;
+  background-color: darkslateblue;
+  padding: 4px;
+  color: var(--text-color);
+  border-radius: 2px;
+}

@@ -14,7 +14,7 @@ const mockChilrenData = [
   },
   {
     name: "Ryan",
-    hobby: ["football", "drawing"],
+    hobby: ["football", "music"],
     email: "linlin@gmail.com",
     age: 6,
     mentor: "kim",
@@ -22,7 +22,7 @@ const mockChilrenData = [
   },
   {
     name: "Luqman",
-    hobby: ["football", "drawing"],
+    hobby: ["football", "camping"],
     email: "linlin@gmail.com",
     age: 7,
     mentor: "kim",
