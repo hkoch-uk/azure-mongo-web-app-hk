@@ -36,3 +36,7 @@
      transform: rotate(360deg);
    }
  }
+
+ .reading-background {
+  background-image: url('https://static1.s123-cdn-static-a.com/ready_uploads/media/40677/2000_5ce21d5de64a5.jpg')
+ }
