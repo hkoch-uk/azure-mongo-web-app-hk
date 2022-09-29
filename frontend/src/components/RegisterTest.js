@@ -134,19 +134,6 @@ function RegisterTest() {
             </div>
           </div>
 
-          <div class="field">
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question" />
-                Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                No
-              </label>
-            </div>
-          </div>
-
           <div class="field is-grouped">
             <div class="control">
               <button class="button button is-danger is-rounded">Submit</button>
@@ -284,6 +271,14 @@ function RegisterTest() {
               <i class="fas fa-phone"></i>
             </span>
           </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" />
+                I agree to the terms and conditions
+              </label>
+            </div>
+          </div>
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-danger is-rounded">Submit</button>
@@ -292,6 +287,8 @@ function RegisterTest() {
               <button class="button is-rounded">Cancel</button>
             </div>
           </div>
+
+    
         </div>
       </div>
     </section>
