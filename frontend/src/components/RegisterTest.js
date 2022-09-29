@@ -1,6 +1,6 @@
 import React from "react"
 
-function RegisterTest() {
+export function RegisterTest() {
 
   var memberOption;
 
@@ -23,7 +23,7 @@ function RegisterTest() {
       setSponsorActive("")
       setSponsorSeen("is-hidden")
       setBuddySeen("is-hidden")
-    
+
     } else if (e.target.text === "Buddy") {
       setBuddyActive("is-active")
       setBuddySeen("")
@@ -288,7 +288,6 @@ function RegisterTest() {
             </div>
           </div>
 
-    
         </div>
       </div>
     </section>
@@ -297,5 +296,3 @@ function RegisterTest() {
 
 
 }
-
-export default RegisterTest;
