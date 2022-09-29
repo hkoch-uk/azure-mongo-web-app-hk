@@ -6,6 +6,7 @@ import Login from './pages/Login';
 
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import SchoolPage from './pages/SchoolPage';
+import EditChildrenFormPage from './pages/EditChildrenFormPage';
 
 function App() {
   return (
@@ -25,6 +26,13 @@ function App() {
             path="/school"
             element={
               <SchoolPage/>
+            }
+          />
+          <Route
+            exact
+            path="/editchildren"
+            element={
+              <EditChildrenFormPage/>
             }
           />
         </Routes>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NewChildForm from "../components/NewChildForm";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 //fetch data about childrens
 // patch the data to the backend
@@ -30,11 +31,13 @@ const mockChilrenData = [
   },
 ];
 export default function SchoolPage() {
+  const navigate = useNavigate()
   const [children, setChildren] = useState([]);
   const [addChild, setAddChild] = useState(false);
   const [viewChildren, setViewChildren] = useState(false);
   const [form, setForm] = useState({});
   const [read, setRead] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   useEffect(() => {
     setChildren(mockChilrenData);
@@ -53,6 +56,14 @@ export default function SchoolPage() {
   const toggleViewChildren = () => {
     setViewChildren(!viewChildren);
   };
+
+  const toggleEdit =() =>{
+    console.log("!")
+    setEdit(!edit);
+    if(edit){
+      navigate("/editchildren")
+    }
+  }
 
   const toggleSendLetter = () => {
     setRead(!read);
@@ -105,7 +116,7 @@ export default function SchoolPage() {
                     >
                       delete
                     </button>
-                    <button>edit</button>
+                    <button onClick={toggleEdit}>edit</button>
                     <button onClick={toggleSendLetter}>
                       {!read ? "Send letter" : "cancel"}
                     </button>
