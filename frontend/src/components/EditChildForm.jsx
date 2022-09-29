@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function NewChildForm({
+export default function EditChildForm({
   formData,
   toggleAddChildren,
   children,
@@ -37,8 +37,6 @@ export default function NewChildForm({
       ...newChildren,
       mentor: "TBC",
     };
-    // add to database function
-    //
     setChildren([...children, updatedNewChildren]);
   };
 
