@@ -1,14 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import RegisterTest from "./components/RegisterTest";
+import { Navbar } from './Components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './Components/Home';
+import { RegisterTest } from './Components/RegisterTest';
 
 function App() {
   return (
-    <div>
-   
-          <RegisterTest />
-    </div>
-  );
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Home />} />
+        <Route path="join-us" element={<RegisterTest />} />
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
 }
 
 export default App;
